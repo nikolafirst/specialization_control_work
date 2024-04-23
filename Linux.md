@@ -6,22 +6,22 @@
 
 ## Создаём файл с Домашними животными
 ```
-user@nkarasev-linux:~$ cat > Pets << EOF > Dog > Cat > Hamsters > EOF
+db@karasev-linux:~$ cat > Pets << EOF > Dog > Cat > Hamsters > EOF
 ```
 
 ## Cоздаём файл с Вьючными животными
 ```
-db@gb-linux:~$ cat > Pack_animals << EOF > Horse > Camel > Donkey > EOF
+db@karasev-linux:~$ cat > Pack_animals << EOF > Horse > Camel > Donkey > EOF
 ```
 
 ## Перенаправляем из стандартного потока ввывода информация в файл
 ```
-db@gb-linux:~$ cat Pets Pack_animals > file3
-file3
+db@karasev-linux:~$ cat Pets Pack_animals > file_animals
+file_animals
 ```
 ## вывод содержимого файла
 ```
-db@gb-linux:~$ cat file3
+db@karasev-linux:~$ cat file_animals
 
 Dog
 Cat
@@ -33,20 +33,20 @@ Donkey
 ## переименовываем файл
 
 ```
-db@gb-linux:~$ mv file3 Human_Friends
+db@karasev-linux:~$ mv file_animals Human_Friends
 
 ```
 
 # Создать директорию, переместить файл туда.
 ## создаём директорию
 ```
-db@gb-linux:~$ mkdir Human_Friends_dir
+db@karasev-linux:~$ mkdir Human_Friends_dir
 ```
 ## перемещаем файл Human_Friends
 ```
-db@gb-linux:~$ mv Human_Friends Human_Friends_dir
+db@karasev-linux:~$ mv Human_Friends Human_Friends_dir
 
-db@gb-linux:~/Human_Friends_dir$ tree
+db@karasev-linux:~/Human_Friends_dir$ tree
 
 . └── Human_Friends
 
@@ -56,10 +56,10 @@ db@gb-linux:~/Human_Friends_dir$ tree
 # Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория.
 ```
 загружаем репозиторий
-db@gb-linux:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+db@karasev-linuxx:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
 
 устанавливаем через утилиту apt
-db@gb-linux:~$ sudo apt install ./mysql-apt-config_0.8.12-1_all.deb –y
+db@karasev-linux:~$ sudo apt install ./mysql-apt-config_0.8.12-1_all.deb –y
 
 устанавливаем версию 5.7
 sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7* sudo mysql_secure_installation
